@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">Akhoon</div>
+
+    <nav class="nav">
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <a class="active" href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#skill">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contactme</a>
+      <i id="theme-toggle" class="fa-regular fa-moon"></i>
+    </nav>
+  </header>
+
+  <section class="hero">
+
+    <!-- LEFT SOCIAL ICONS -->
+    <div class="socials">
+      <i class="fa-brands fa-linkedin-in"></i>
+      <i class="fa-solid fa-globe"></i>
+      <i class="fa-brands fa-github"></i>
+    </div>
+
+    <!-- TEXT -->
+    <div class="hero-content">
+      <h1>Hi, I'm Latif Akhoon</h1>
+      <h3>Frontend Developer</h3>
+      <p>
+        High level experience in web design and development
+        knowledge, producing quality work.
+      </p>
+
+      <button class="btn" >
+        <a href="#contact">Contact Me <i class="fa-solid fa-paper-plane"></i></a>
+        
+      </button>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="hero-image">
+      <div class="blob">
+        <img src="images/la.JPG" alt="profile">
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- SCROLL -->
+  <div class="scroll" onclick="scrollToAbout()">
+    <i class="fa-solid fa-computer-mouse"></i>
+    <span>Scroll down</span>
+  </div>
+  <!-- ------about-section------ -->
+  <section class="about" id="about">
+    <div class="about-title">
+      <h2>About Me</h2>
+      <span>My introduction</span>
+    </div>
+
+    <div class="about-container">
+      <!-- IMAGE -->
+      <div class="about-img">
+        <img src="images/la.JPG" alt="About image">
+      </div>
+
+      <!-- CONTENT -->
+      <div class="about-content">
+        <p>
+          Web developer, with extensive knowledge and
+          years of experience, working in web technologies
+          and UI / UX design, delivering quality work.
+        </p>
+
+        <div class="about-info">
+          <div>
+            <h3>08+</h3>
+            <span>Years<br>experience</span>
+          </div>
+
+          <div>
+            <h3>20+</h3>
+            <span>Completed<br>projects</span>
+          </div>
+
+          <div>
+            <h3>05+</h3>
+            <span>Companies<br>worked</span>
+          </div>
+        </div>
+
+        <a href="files/LatifCV (2).pdf" class="about-btn" target="_blank" rel="noopener" download="LatifAkhoonCV.pdf">
+          Download CV <i class="fa-solid fa-download"></i>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- -------skills-section------ -->
+
+  <section class="skills" id="skill">
+    <h2 class="section-title">Skills</h2>
+    <span class="section-subtitle">My technical level</span>
+
+    <div class="skills-container">
+
+      <!-- Frontend -->
+      <div class="skills-item">
+        <div class="skills-header">
+          <div class="skills-left">
+            <i class="fa-solid fa-code skills-icon"></i>
+            <div>
+              <h3 class="skills-title">Frontend Developer</h3>
+              <span class="skills-subtitle">More than 4 years</span>
+            </div>
+          </div>
+          <i class="fa-solid fa-chevron-down skills-arrow"></i>
+        </div>
+
+        <div class="skills-content">
+          <div class="skill-bar">
+            <span>HTML</span>
+            <div class="bar">
+              <div style="width:90%">90%</div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <span>CSS</span>
+            <div class="bar">
+              <div style="width:85%">85%</div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <span>JavaScript</span>
+            <div class="bar">
+              <div style="width:80%">80%</div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <span>React</span>
+            <div class="bar">
+              <div style="width:75%">75%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Backend -->
+      <div class="skills-item">
+        <div class="skills-header">
+          <div class="skills-left">
+            <i class="fa-solid fa-server skills-icon"></i>
+            <div>
+              <h3 class="skills-title">Backend Developer</h3>
+              <span class="skills-subtitle">More than 1 years</span>
+            </div>
+          </div>
+          <i class="fa-solid fa-chevron-down skills-arrow"></i>
+        </div>
+
+        <div class="skills-content">
+          <div class="skill-bar">
+            <span>PHP</span>
+            <div class="bar">
+              <div style="width:70%">70%</div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <span>Node JS</span>
+            <div class="bar">
+              <div style="width:65%">65%</div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <span>MySQL</span>
+            <div class="bar">
+              <div style="width:75%">75%</div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <span>MongoDB</span>
+            <div class="bar">
+              <div style="width:60%">60%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Designer -->
+      <div class="skills-item">
+        <div class="skills-header">
+          <div class="skills-left">
+            <i class="fa-solid fa-pen-ruler skills-icon"></i>
+            <div>
+              <h3 class="skills-title">Designer</h3>
+              <span class="skills-subtitle">More than 3 years</span>
+            </div>
+          </div>
+          <i class="fa-solid fa-chevron-down skills-arrow"></i>
+        </div>
+
+        <div class="skills-content">
+          <div class="skill-bar">
+            <span>Figma</span>
+            <div class="bar">
+              <div style="width:85%">85%</div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <span>Photoshop</span>
+            <div class="bar">
+              <div style="width:75%">75%</div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <span>Illustrator</span>
+            <div class="bar">
+              <div style="width:70%">70%</div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <span>XD</span>
+            <div class="bar">
+              <div style="width:65%">65%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+  <!-- -----qualification-section------ -->
+
+  <section class="qualification section" id="service">
+    <h2 class="section-title">Qualification</h2>
+    <span class="section-subtitle">My personal journey</span>
+
+    <!-- Tabs -->
+    <div class="qualification__tabs">
+      <div class="qualification__button qualification__active" data-target="#education">
+        <i class="fa-solid fa-graduation-cap"></i>
+        Education
+      </div>
+
+      <div class="qualification__button" data-target="#work">
+        <i class="fa-solid fa-briefcase"></i>
+        Work
+      </div>
+    </div>
+
+    <div class="qualification__sections">
+
+      <!-- EDUCATION -->
+      <div class="qualification__content qualification__active" id="education">
+
+        <div class="qualification__data">
+          <div>
+            <h3 class="qualification__title">Bachelor in IT</h3>
+            <span class="qualification__subtitle">Punjab University</span>
+            <div class="qualification__calendar">
+              <i class="fa-regular fa-calendar"></i>
+              2021 - 2024
+            </div>
+          </div>
+
+          <div>
+            <span class="qualification__rounder"></span>
+            <span class="qualification__line"></span>
+          </div>
+
+          <div></div>
+        </div>
+
+        <div class="qualification__data">
+          <div></div>
+
+          <div>
+            <span class="qualification__rounder"></span>
+          </div>
+
+          <div>
+            <h3 class="qualification__title">Master in UI/UX</h3>
+            <span class="qualification__subtitle">Punjab University</span>
+            <div class="qualification__calendar">
+              <i class="fa-regular fa-calendar"></i>
+              2022 - 2023
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WORK -->
+      <div class="qualification__content" id="work">
+
+        <div class="qualification__data">
+          <div>
+            <h3 class="qualification__title">Web Design</h3>
+            <span class="qualification__subtitle">University of Lahore</span>
+            <div class="qualification__calendar">
+              <i class="fa-regular fa-calendar"></i>
+              2021 - 2022
+            </div>
+          </div>
+
+          <div>
+            <span class="qualification__rounder"></span>
+            <span class="qualification__line"></span>
+          </div>
+
+          <div></div>
+        </div>
+
+        <div class="qualification__data">
+          <div></div>
+
+          <div>
+            <span class="qualification__rounder"></span>
+          </div>
+
+          <div>
+            <h3 class="qualification__title">Web Design</h3>
+            <span class="qualification__subtitle">University of Lahore</span>
+            <div class="qualification__calendar">
+              <i class="fa-regular fa-calendar"></i>
+              2022 - 2023
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- -----service-section------ -->
+  <section class="services section" id="services">
+    <h2 class="section-title">Services</h2>
+    <span class="section-subtitle">What i offer</span>
+
+    <div class="services__container">
+      <!-- Service Card -->
+      <div class="services__content">
+        <i class="services__icon">⌘</i>
+        <h3 class="services__title">Frontend<br />Developer</h3>
+
+        <span class="services__button" onclick="openModal(1)">
+          View More →
+        </span>
+      </div>
+
+      <div class="services__content">
+        <i class="services__icon">✏</i>
+        <h3 class="services__title">UI/UX<br />Designer</h3>
+
+        <span class="services__button" onclick="openModal(2)">
+          View More →
+        </span>
+      </div>
+
+      <div class="services__content">
+        <i class="services__icon">✎</i>
+        <h3 class="services__title">Branding<br />Designer</h3>
+
+        <span class="services__button" onclick="openModal(3)">
+          View More →
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="services__modal" id="service-modal">
+    <div class="services__modal-content">
+      <span class="services__modal-close" onclick="closeModal()">✕</span>
+
+      <h3 class="services__modal-title" id="modal-title"></h3>
+
+      <ul class="services__modal-services" id="modal-list"></ul>
+    </div>
+  </div>
+
+
+  <!-- ------portfolio-section------ -- -->
+  <section class="portfolio section" id="portfolio">
+    <h2 class="section-title">Portfolio</h2>
+    <span class="section-subtitle">Most recent work</span>
+
+    <div class="portfolio__container">
+      <button class="portfolio__arrow left" id="prev">&#10094;</button>
+
+      <div class="portfolio__wrapper">
+        <div class="portfolio__slide active">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsW8i6QCgUo4F9ZavctNFXOTde_KF1n4OzRw&s"
+            class="portfolio__img" />
+          <div class="portfolio__data">
+            <h3 class="portfolio__title">Modern website</h3>
+            <p class="portfolio__description">
+              Website adaptable to all devices, with UI components and animated interactions.
+            </p>
+            <a href="#" class="portfolio__button">Demo →</a>
+          </div>
+        </div>
+
+        <div class="portfolio__slide">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbpmjNOgt6WOnN12Hv6VnubckWBlRwgWo2RQ&s"
+            class="portfolio__img" />
+          <div class="portfolio__data">
+            <h3 class="portfolio__title">Brand Design</h3>
+            <p class="portfolio__description">
+              Creative branding with modern UI/UX principles.
+            </p>
+            <a href="#" class="portfolio__button">Demo →</a>
+          </div>
+        </div>
+
+        <div class="portfolio__slide">
+          <img src="images/portfolio3.jpg" class="portfolio__img" />
+          <div class="portfolio__data">
+            <h3 class="portfolio__title">Online Store</h3>
+            <p class="portfolio__description">
+              Fully responsive e-commerce website.
+            </p>
+            <a href="#" class="portfolio__button">Demo →</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="portfolio__arrow right " id="next">&#10095;</button>
+    </div>
+
+    <div class="portfolio__dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <section class="cta">
+      <div class="cta__container">
+
+        <div class="cta__data">
+          <h2 class="cta__title">You have a new project</h2>
+          <p class="cta__description">
+            Contact me now and get a 30% discount on your new project.
+          </p>
+
+          <a href="#contact" class="cta__button">
+            Contact Me <span>➜</span>
+          </a>
+        </div>
+
+        <div class="cta__img">
+          <img src="images/la.JPG" alt="Profile">
+        </div>
+
+      </div>
+    </section>
+  </section>
+
+   <!-- --------testimonial-section------  -->
+
+  <section class="testimonial-section">
+  <div class="container">
+    <h2 class="section-title">Testimonial</h2>
+    <p class="section-subtitle">What my clients say</p>
+
+    <!-- SLIDE 1 -->
+    <div class="testimonial-slide active">
+      <div class="testimonial-card">
+        <div class="client-info">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+          <div>
+            <h4>John Smith</h4>
+            <span>CEO, Company</span>
+          </div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>
+          Working with this developer was an amazing experience.
+          Highly professional and delivered on time.
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="client-info">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+          <div>
+            <h4>Sarah Johnson</h4>
+            <span>Marketing Head</span>
+          </div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>
+          The website design exceeded our expectations.
+          Great communication and skills.
+        </p>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="testimonial-slide">
+      <div class="testimonial-card">
+        <div class="client-info">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="">
+          <div>
+            <h4>Michael Lee</h4>
+            <span>Startup Founder</span>
+          </div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>
+          Very creative and detail-oriented.
+          I highly recommend working together.
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="client-info">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="">
+          <div>
+            <h4>Emma Watson</h4>
+            <span>Designer</span>
+          </div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>
+          Professional service and modern design.
+          Absolutely satisfied with the results.
+        </p>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="testimonial-slide">
+      <div class="testimonial-card">
+        <div class="client-info">
+          <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="">
+          <div>
+            <h4>David Brown</h4>
+            <span>Manager</span>
+          </div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>
+          Fast delivery and clean coding.
+          Will definitely hire again.
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="client-info">
+          <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="">
+          <div>
+            <h4>Olivia Davis</h4>
+            <span>Entrepreneur</span>
+          </div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p>
+          Excellent experience from start to finish.
+          Highly recommended developer.
+        </p>
+      </div>
+    </div>
+
+    <!-- DOTS -->
+    <div class="testimonial-dots">
+      <span class="testimonial-dot active"></span>
+      <span class="testimonial-dot"></span>
+      <span class="testimonial-dot"></span>
+    </div>
+
+  </div>
+</section>
+
+        
+
+  <!-- ------contact-section------ -->
+
+  <section class="contact-section" id="contact">
+  <div class="container">
+
+    <div class="section-header">
+      <h2>Contact Me</h2>
+      <p>Get in touch</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Left Info -->
+      <div class="contact-info">
+
+        <div class="info-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <h4>Call Me</h4>
+            <span>0320 4480532</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <span>mrawaisrao@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <h4>Location</h4>
+            <span>Wapda Town, Lahore, Punjab, Pakistan</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Form -->
+      <form class="contact-form">
+
+        <div class="form-row">
+          <input type="text" placeholder="Write your name">
+          <input type="email" placeholder="Write your email">
+        </div>
+
+        <input type="text" placeholder="Write your project">
+        <textarea rows="6" placeholder="Write your message"></textarea>
+
+        <button type="submit">
+          Send Message <i class="fa-solid fa-paper-plane"></i>
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+</section>
+
+  
+
+  <script src="script.js"></script>
+</body>
+
+</html>
