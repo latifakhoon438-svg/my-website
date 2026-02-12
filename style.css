@@ -652,6 +652,7 @@ body.dark .services__modal-services li::before {
   /* height: 250px; */
   width: 90%;
   /* background: #0f172a; */
+  margin-left: 50px;
 }
 
 .portfolio__slide.active {
