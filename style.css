@@ -118,14 +118,37 @@ body {
 }
 
 .btn {
-  margin-top: 30px;
-  background: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #6c63ff;
   color: #fff;
-  padding: 14px 30px;
-  border: none;
+  text-decoration: none;
+
   border-radius: 10px;
-  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.3);
 }
+
+.btn:hover {
+  background: #5548e5;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(108, 99, 255, 0.4);
+}
+
+.btn i {
+  transition: transform 0.3s ease;
+}
+
+.btn:hover i {
+  transform: translateX(5px);
+}
+
 
 /* IMAGE RIGHT */
 .hero-image {
