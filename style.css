@@ -777,22 +777,34 @@ body.dark .services__modal-services li::before {
 
 
 /* TESTIMONIAL SECTION */
+
 .testimonial-section {
-  padding: 100px 0;
-  background: var(--bg);
+  text-align: center;
+  padding: 80px 20px;
+  background: #f9f9fb;
 }
 
-.testimonial-section .container {
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
+.testimonial-section h2 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.testimonial-section p {
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.testimonial-slider {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
 }
 
 .testimonial-slide {
   display: none;
   gap: 30px;
   justify-content: center;
-  margin-top: 40px;
+  transition: all 0.5s ease;
 }
 
 .testimonial-slide.active {
@@ -801,81 +813,61 @@ body.dark .services__modal-services li::before {
 
 .testimonial-card {
   background: #fff;
-  padding: 25px;
-  width: 400px;
+  padding: 20px;
+  width: 350px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   text-align: left;
-  transition: 0.3s;
 }
 
-.testimonial-card:hover {
-  transform: translateY(-5px);
-}
-
-.client-info {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 15px;
-}
-
-.client-info img {
+.testimonial-card img {
   width: 55px;
   height: 55px;
   border-radius: 50%;
 }
 
-.client-info h4 {
-  margin: 0;
+.testimonial-card h3 {
+  margin: 10px 0 0;
 }
 
-.client-info span {
+.testimonial-card span {
   font-size: 14px;
-  color: var(--muted);
+  color: #888;
 }
 
 .stars {
-  color: gold;
-  margin-bottom: 10px;
+  color: #a18aff;
+  margin: 10px 0;
 }
 
-/* DOTS */
 .testimonial-dots {
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
-.testimonial-dot {
+.dot {
   height: 12px;
   width: 12px;
-  margin: 0 5px;
   background: #ccc;
-  border-radius: 50%;
   display: inline-block;
+  border-radius: 50%;
+  margin: 0 5px;
   cursor: pointer;
 }
 
-.testimonial-dot.active {
-  background: var(--primary);
+.dot.active {
+  background: #6c63ff;
 }
 
-/* MOBILE */
+/* Responsive */
 @media (max-width: 768px) {
   .testimonial-slide {
     flex-direction: column;
     align-items: center;
   }
-
   .testimonial-card {
     width: 90%;
+    margin-bottom: 20px;
   }
-}
-.testimonial-slide {
-  display: none;
-}
-
-.testimonial-slide.active {
-  display: flex;
 }
 
 

@@ -163,44 +163,33 @@ const slides = document.querySelectorAll(".portfolio__slide");
 
   // ------testimonial-section------
  
-window.addEventListener("load", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-  const testimonialSlides = document.querySelectorAll(".testimonial-slide");
-  const testimonialDots = document.querySelectorAll(".testimonial-dot");
+  const slides = document.querySelectorAll(".testimonial-slide");
+  const dots = document.querySelectorAll(".dot");
+  let index = 0;
 
-  let testimonialIndex = 0;
+  function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active"));
 
-  function showTestimonial(i) {
-
-    testimonialSlides.forEach(slide =>
-      slide.classList.remove("active")
-    );
-
-    testimonialDots.forEach(dot =>
-      dot.classList.remove("active")
-    );
-
-    testimonialSlides[i].classList.add("active");
-    testimonialDots[i].classList.add("active");
+    slides[i].classList.add("active");
+    dots[i].classList.add("active");
   }
 
-  testimonialDots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      testimonialIndex = i;
-      showTestimonial(testimonialIndex);
+  // Dot click
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", function () {
+      index = i;
+      showSlide(index);
     });
   });
 
-  setInterval(() => {
-
-    testimonialIndex++;
-
-    if (testimonialIndex >= testimonialSlides.length) {
-      testimonialIndex = 0;
-    }
-
-    showTestimonial(testimonialIndex);
-
-  }, 4000);
+  // Auto slide
+  setInterval(function () {
+    index++;
+    if (index >= slides.length) index = 0;
+    showSlide(index);
+  }, 5000);
 
 });
