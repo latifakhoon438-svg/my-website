@@ -163,33 +163,42 @@ const slides = document.querySelectorAll(".portfolio__slide");
 
   // ------testimonial-section------
  
-document.addEventListener("DOMContentLoaded", function () {
-
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.querySelector(".testimonial-slider");
   const slides = document.querySelectorAll(".testimonial-slide");
   const dots = document.querySelectorAll(".dot");
+  const prevBtn = document.getElementById("prev");
+  const nextBtn = document.getElementById("next");
+
   let index = 0;
 
   function showSlide(i) {
-    slides.forEach(slide => slide.classList.remove("active"));
+    const offset = -i * 100;
+    slider.style.transform = `translateX(${offset}%)`;
     dots.forEach(dot => dot.classList.remove("active"));
-
-    slides[i].classList.add("active");
     dots[i].classList.add("active");
   }
 
-  // Dot click
+  nextBtn.addEventListener("click", () => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  });
+
+  prevBtn.addEventListener("click", () => {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+
   dots.forEach((dot, i) => {
-    dot.addEventListener("click", function () {
+    dot.addEventListener("click", () => {
       index = i;
       showSlide(index);
     });
   });
 
-  // Auto slide
-  setInterval(function () {
-    index++;
-    if (index >= slides.length) index = 0;
+  // Optional: Auto-slide every 5s
+  setInterval(() => {
+    index = (index + 1) % slides.length;
     showSlide(index);
   }, 5000);
-
 });
