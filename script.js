@@ -163,16 +163,15 @@ const slides = document.querySelectorAll(".portfolio__slide");
 
   // ------testimonial-section------
  
-// ------ testimonial-section ------
-// ===== TESTIMONIAL SLIDER =====
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
 
   const testimonialSlides = document.querySelectorAll(".testimonial-slide");
   const testimonialDots = document.querySelectorAll(".testimonial-dot");
 
   let testimonialIndex = 0;
 
-  function showTestimonialSlide(index) {
+  function showTestimonial(i) {
+
     testimonialSlides.forEach(slide =>
       slide.classList.remove("active")
     );
@@ -181,23 +180,27 @@ document.addEventListener("DOMContentLoaded", function () {
       dot.classList.remove("active")
     );
 
-    testimonialSlides[index].classList.add("active");
-    testimonialDots[index].classList.add("active");
+    testimonialSlides[i].classList.add("active");
+    testimonialDots[i].classList.add("active");
   }
 
   testimonialDots.forEach((dot, i) => {
     dot.addEventListener("click", () => {
       testimonialIndex = i;
-      showTestimonialSlide(testimonialIndex);
+      showTestimonial(testimonialIndex);
     });
   });
 
-  // AUTO SLIDE
   setInterval(() => {
-    testimonialIndex =
-      (testimonialIndex + 1) % testimonialSlides.length;
 
-    showTestimonialSlide(testimonialIndex);
+    testimonialIndex++;
+
+    if (testimonialIndex >= testimonialSlides.length) {
+      testimonialIndex = 0;
+    }
+
+    showTestimonial(testimonialIndex);
+
   }, 4000);
 
 });

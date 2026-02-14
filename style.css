@@ -776,105 +776,109 @@ body.dark .services__modal-services li::before {
 
 
 
-
-.testimonial-section{
-  padding:80px 0;
-  text-align:center;
+/* TESTIMONIAL SECTION */
+.testimonial-section {
+  padding: 100px 0;
+  background: var(--bg);
 }
 
-.container{
-  width:85%;
-  margin:auto;
+.testimonial-section .container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
 }
 
-.section-title{
-  font-size:32px;
-  font-weight:600;
+.testimonial-slide {
+  display: none;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
 }
 
-.section-subtitle{
-  color:#777;
-  margin-bottom:50px;
+.testimonial-slide.active {
+  display: flex;
 }
 
-.testimonial-slide{
-  display:none;
-  justify-content:space-between;
-  gap:40px;
-  animation:fade 0.5s ease-in-out;
+.testimonial-card {
+  background: #fff;
+  padding: 25px;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: 0.3s;
 }
 
-.testimonial-slide.active{
-  display:flex;
+.testimonial-card:hover {
+  transform: translateY(-5px);
 }
 
-@keyframes fade{
-  from{opacity:0;}
-  to{opacity:1;}
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
 }
 
-.testimonial-card{
-  width:48%;
-  text-align:left;
+.client-info img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
 }
 
-.client-info{
-  display:flex;
-  align-items:center;
-  gap:15px;
+.client-info h4 {
+  margin: 0;
 }
 
-.client-info img{
-  width:60px;
-  height:60px;
-  border-radius:50%;
+.client-info span {
+  font-size: 14px;
+  color: var(--muted);
 }
 
-.client-info h4{
-  margin:0;
+.stars {
+  color: gold;
+  margin-bottom: 10px;
 }
 
-.client-info span{
-  font-size:14px;
-  color:#888;
+/* DOTS */
+.testimonial-dots {
+  margin-top: 30px;
 }
 
-.stars{
-  color:#8b7cf6;
-  margin:15px 0;
+.testimonial-dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
 }
 
-.testimonial-card p{
-  color:#555;
-  line-height:1.6;
+.testimonial-dot.active {
+  background: var(--primary);
 }
 
-.testimonial-dots{
-  margin-top:30px;
-}
-
-.testimonial-dot{
-  height:10px;
-  width:10px;
-  margin:0 5px;
-  background:#ccc;
-  border-radius:50%;
-  display:inline-block;
-  cursor:pointer;
-}
-
-.testimonial-dot.active{
-  background:#8b7cf6;
-}
-
-@media(max-width:768px){
-  .testimonial-slide.active{
-    flex-direction:column;
+/* MOBILE */
+@media (max-width: 768px) {
+  .testimonial-slide {
+    flex-direction: column;
+    align-items: center;
   }
-  .testimonial-card{
-    width:100%;
+
+  .testimonial-card {
+    width: 90%;
   }
 }
+.testimonial-slide {
+  display: none;
+}
+
+.testimonial-slide.active {
+  display: flex;
+}
+
+
 
 /* ------contacts-section-------  */
 .contact-section {
