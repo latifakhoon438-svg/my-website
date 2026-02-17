@@ -22,34 +22,34 @@ toggle.addEventListener("click", () => {
 // ----skill-section----
 
 
-  const skillsHeader = document.querySelectorAll(".skills-header");
+const skillsHeader = document.querySelectorAll(".skills-header");
 
-  skillsHeader.forEach(item => {
-    item.addEventListener("click", () => {
-      const parent = item.parentElement;
-      parent.classList.toggle("active");
-    });
+skillsHeader.forEach(item => {
+  item.addEventListener("click", () => {
+    const parent = item.parentElement;
+    parent.classList.toggle("active");
   });
+});
 
-  // -------qualification-section------
+// -------qualification-section------
 
-   const tabs = document.querySelectorAll(".qualification__button");
-  const contents = document.querySelectorAll(".qualification__content");
+const tabs = document.querySelectorAll(".qualification__button");
+const contents = document.querySelectorAll(".qualification__content");
 
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      tabs.forEach(t => t.classList.remove("qualification__active"));
-      contents.forEach(c => c.classList.remove("qualification__active"));
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("qualification__active"));
+    contents.forEach(c => c.classList.remove("qualification__active"));
 
-      tab.classList.add("qualification__active");
-      document
-        .querySelector(tab.dataset.target)
-        .classList.add("qualification__active");
-    });
+    tab.classList.add("qualification__active");
+    document
+      .querySelector(tab.dataset.target)
+      .classList.add("qualification__active");
   });
+});
 
-  // ----service-section----
-  const modal = document.getElementById("service-modal");
+// ----service-section----
+const modal = document.getElementById("service-modal");
 const title = document.getElementById("modal-title");
 const list = document.getElementById("modal-list");
 
@@ -103,66 +103,66 @@ function closeModal() {
 
 // ------portfolio-section------
 const slides = document.querySelectorAll(".portfolio__slide");
-  const dots = document.querySelectorAll(".dot");
-  let index = 0;
+const dots = document.querySelectorAll(".dot");
+let index = 0;
 
-  function showSlide(i) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    dots.forEach(dot => dot.classList.remove("active"));
+function showSlide(i) {
+  slides.forEach(slide => slide.classList.remove("active"));
+  dots.forEach(dot => dot.classList.remove("active"));
 
-    slides[i].classList.add("active");
-    dots[i].classList.add("active");
-  }
+  slides[i].classList.add("active");
+  dots[i].classList.add("active");
+}
 
-  document.getElementById("next").onclick = () => {
-    index = (index + 1) % slides.length;
+document.getElementById("next").onclick = () => {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+};
+
+document.getElementById("prev").onclick = () => {
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+};
+
+dots.forEach((dot, i) => {
+  dot.onclick = () => {
+    index = i;
     showSlide(index);
   };
-
-  document.getElementById("prev").onclick = () => {
-    index = (index - 1 + slides.length) % slides.length;
-    showSlide(index);
-  };
-
-  dots.forEach((dot, i) => {
-    dot.onclick = () => {
-      index = i;
-      showSlide(index);
-    };
-  });
-  function scrollToAbout() {
-    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-  }
+});
+function scrollToAbout() {
+  document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+}
 
 
-     (function(){
-    emailjs.init("fkXMyhpsHTBflUyuZ"); 
-  })();
+// (function () {
+//   emailjs.init("fkXMyhpsHTBflUyuZ");
+// })();
 
-  // -----contect-section------
-    emailjs.init("YOUR_PUBLIC_KEY"); // ← replace with your EmailJS Public Key
+// -----contect-section------
+// emailjs.init("YOUR_PUBLIC_KEY"); // ← replace with your EmailJS Public Key
 
-  document.getElementById("contactForm").addEventListener("submit", function(e){
-    e.preventDefault();
+// document.getElementById("contact-Form").addEventListener("submit", function (e) {
+//   e.preventDefault();
 
-    emailjs.sendForm(
-      "YOUR_SERVICE_ID",   // ← replace with your Service ID
-      "YOUR_TEMPLATE_ID",  // ← replace with your Template ID
-      this
-    ).then(
-      function(){
-        alert("✅ Message sent successfully!");
-        document.getElementById("contactForm").reset();
-      },
-      function(error){
-        console.log(error);
-        alert("❌ Message failed. Try again!");
-      }
-    );
-  });
+//   emailjs.sendForm(
+//     "YOUR_SERVICE_ID",   // ← replace with your Service ID
+//     "YOUR_TEMPLATE_ID",  // ← replace with your Template ID
+//     this
+//   ).then(
+//     function () {
+//       alert("✅ Message sent successfully!");
+//       document.getElementById("contactForm").reset();
+//     },
+//     function (error) {
+//       console.log(error);
+//       alert("❌ Message failed. Try again!");
+//     }
+//   );
+// });
 
-  // ------testimonial-section------
- 
+// ------testimonial-section------
+
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.querySelector(".testimonial-slider");
   const slides = document.querySelectorAll(".testimonial-slide");
@@ -202,3 +202,31 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(index);
   }, 5000);
 });
+
+// ----scroll button bottom to top------
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  // Click event: scroll to top smoothly
+  scrollBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+  // Optional: button visibility on scroll
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "flex"; // show button after 300px scroll
+    } else {
+      scrollBtn.style.display = "none"; // hide button at top
+    }
+  });
+
+  // Initially hide button
+  scrollBtn.style.display = "none";
+});
+
+
+
