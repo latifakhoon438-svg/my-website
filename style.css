@@ -28,6 +28,7 @@ body {
 
 /* HEADER */
 .header {
+  position: relative;
   padding: 25px 100px;
   display: flex;
   justify-content: space-between;
@@ -39,6 +40,7 @@ body {
 
 .logo {
   font-weight: 600;
+  /* font-size: 22px; */
 }
 
 .nav a {
@@ -207,7 +209,7 @@ body {
 .scroll {
   position: relative;
 
-  right : 10%;
+  right : 20%;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1151,91 +1153,166 @@ body.dark .services__modal-services li::before {
 
 
 /* ----responsive-section---- */
-/* ==============================
-   FULL RESPONSIVE CSS (TABLET + MOBILE)
-=============================== */
-@media (max-width: 1024px) {
-  /* Reduce padding for medium screens */
-  .hero, .about, .skills, .qualification, .services,
-  .portfolio, .testimonial-section, .contact-section, .cta, .footer {
-    padding: 60px 40px;
+/* ===== RESPONSIVE FOR TABLETS / MOBILE ===== */
+@media (max-width: 768px) {
+  .bottomBtn {
+    left: 20px;
+    bottom: 20px;
   }
 
-  .hero-content h1 { font-size: 40px; }
-  .hero-content h3 { font-size: 20px; }
-}
+  .whatsapp-float {
+    right: 20px; /* bottom-right */
+    bottom: 20px;
+  }
 
-@media (max-width: 768px) {
-  /* ----- General Section Padding ----- */
-  .hero { padding: 40px 20px; flex-direction: column; height: auto; }
-  .about, .skills, .qualification, .services,
-  .portfolio, .testimonial-section, .contact-section, .cta, .footer {
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    padding: 60px 20px;
+    height: auto;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content h3 {
+    font-size: 18px;
+  }
+
+  .hero-image {
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+  }
+
+  .blob {
+    width: 280px;
+    height: 280px;
+    margin-left: 0;
+  }
+
+  .blob img {
+    width: 220px;
+    bottom: 30px;
+    left: 20px;
+  }
+
+  .socials {
+    left: 10px;
+  }
+
+  /* ABOUT */
+  .about-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .about-info {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  /* SKILLS */
+  .skills {
+    padding: 60px 20px;
+  }
+
+  /* QUALIFICATION */
+  .qualification__data {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  /* SERVICES */
+  .services__container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  /* PORTFOLIO */
+  .portfolio__container {
+    flex-direction: column;
+  }
+
+  .portfolio__slide {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .portfolio__img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .portfolio__data {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* TESTIMONIAL */
+  .testimonial-slide {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    width: 90%;
+    margin: auto;
+  }
+
+  .arrow {
+    display: none; /* hide arrows for mobile slider */
+  }
+
+  /* CONTACT */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* CTA */
+  .cta__container {
+    flex-direction: column;
+    text-align: center;
     padding: 40px 20px;
   }
 
-  /* ----- Hero Section ----- */
-  .hero-content { margin-left: 0; text-align: center; max-width: 100%; }
-  .hero-content h1 { font-size: 28px; }
-  .hero-content h3 { font-size: 16px; }
-  .hero-image { width: 250px; height: 250px; margin-top: 20px; }
-  .blob { width: 220px; height: 220px; margin-left: 0; }
-  .blob img { width: 180px; bottom: 20px; left: 15px; }
-  .socials { left: 10px; }
+  .cta__img img {
+    margin-top: 30px;
+  }
 
-  /* ----- About Section ----- */
-  .about-container { grid-template-columns: 1fr; gap: 30px; text-align: center; padding: 0 20px; }
-  .about-info { justify-content: center; gap: 20px; }
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
 
-  /* ----- Skills Section ----- */
-  .skills { padding: 40px 20px; }
-  .skills-item { margin-bottom: 20px; }
+  .footer-right {
+    justify-content: center;
+  }
 
-  /* ----- Qualification Section ----- */
-  .qualification__data { grid-template-columns: 1fr; text-align: center; }
+  /* WHATSAPP BUTTON */
+  .whatsapp-float {
+    right: 20px; /* bottom-right */
+    bottom: 20px;
+  }
 
-  /* ----- Services Section ----- */
-  .services__container { flex-direction: column; gap: 20px; align-items: center; }
-  .services__content { width: 100%; max-width: 320px; }
-
-  /* ----- Portfolio Section ----- */
-  .portfolio__container { flex-direction: column; }
-  .portfolio__slide { flex-direction: column; margin-left: 0; gap: 20px; }
-  .portfolio__img { width: 100%; max-width: 280px; height: auto; }
-  .portfolio__data { text-align: center; margin-top: 15px; }
-  .portfolio__arrow { margin: 20px 0; }
-
-  /* ----- Testimonial Section ----- */
-  .testimonial-slide { flex-direction: column; gap: 20px; }
-  .testimonial-card { width: 90%; margin: auto; }
-  .arrow { display: none; }
-
-  /* ----- CTA Section ----- */
-  .cta__container { flex-direction: column; text-align: center; padding: 30px 20px; }
-  .cta__img img { margin-top: 20px; width: 200px; height: auto; }
-
-  /* ----- Contact Section ----- */
-  .contact-grid { grid-template-columns: 1fr; gap: 30px; }
-
-  /* ----- Footer Section ----- */
-  .footer-container { flex-direction: column; gap: 20px; text-align: center; }
-  .footer-right { justify-content: center; }
-
-  /* ----- WhatsApp Floating Button ----- */
-  .whatsapp-float { right: 20px; bottom: 20px; width: 55px; height: 55px; }
-  .whatsapp-float i { font-size: 28px; }
-
-  /* ----- Scroll-to-Top Button ----- */
-  .bottomBtn { right: 20px; bottom: 80px; width: 45px; height: 45px; font-size: 16px; }
-}
-
-/* ----- Extra small devices ----- */
-@media (max-width: 480px) {
-  .hero-content h1 { font-size: 24px; }
-  .hero-content h3 { font-size: 14px; }
-  .skills-title { font-size: 16px; }
-  .skills-subtitle { font-size: 12px; }
-  .portfolio__img { max-width: 220px; }
-  .testimonial-card { width: 95%; }
-  .cta__img img { width: 180px; }
-  .services__content { max-width: 100%; padding: 30px; }
+  /* BOTTOM SCROLL BUTTON */
+  .bottomBtn {
+    right: 20px;
+    bottom: 20px;
+  }
 }
