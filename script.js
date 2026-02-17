@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
       behavior: "smooth"
     });
   });
-
+  git
   // Optional: button visibility on scroll
   window.addEventListener("scroll", function () {
     if (window.scrollY > 300) {
