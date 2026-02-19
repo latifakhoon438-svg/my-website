@@ -4,13 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
 </head>
 
 <body>
+
+  <!-- NAVBAR -->
   <header class="header">
     <div class="logo">Latif AkhooN</div>
 
@@ -27,51 +35,73 @@
     </nav>
   </header>
 
+  <!-- HERO SECTION -->
   <section class="hero">
 
-    <!-- LEFT SOCIAL ICONS -->
-    <div class="socials">
-      <i class="fa-brands fa-linkedin-in"></i>
-      <i class="fa-solid fa-globe"></i>
-      <i class="fa-brands fa-github"></i>
+    <!-- SOCIAL ICONS -->
+    <div class="social">
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-brands fa-github"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
     </div>
 
-    <!-- TEXT -->
-    <div class="hero-content">
-      <h1>Hi, I'm Latif AkhooN</h1>
-      <h3>Frontend Developer</h3>
-      <p>
-        High level experience in web design and development
-        knowledge, producing quality work.
-      </p>
+    <div class="hero-container">
 
-      <a href="#contact" class="btn">
-        Contact Me <i class="fa-solid fa-paper-plane"></i>
-      </a>
-    </div>
+      <!-- LEFT -->
+      <div class="hero-text">
+        <h1>Hi, I'm <span>Latif AkhooN</span></h1>
+        <h3>Frontend Developer</h3>
+        <p>
+          High level experience in web design and development knowledge, producing quality work.
+        </p>
 
-    <!-- IMAGE -->
-    <div class="hero-image">
-      <div class="blob">
-        <img src="images/la.JPG" alt="profile">
+        <a href="#" class="hero-btn">
+          Contact Me <i class="fa-solid fa-paper-plane"></i>
+        </a>
       </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="hero-img">
+
+        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg">
+
+          <mask id="mask0" mask-type="alpha">
+            <path fill="white" d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+          165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 
+          21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 
+          10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 
+          10.857 190.312 36.4879Z" />
+          </mask>
+
+          <g mask="url(#mask0)">
+
+            <path fill="#6c63ff" d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+          165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 
+          21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 
+          10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 
+          10.857 190.312 36.4879Z" />
+
+            <!-- USE TRANSPARENT PNG HERE -->
+            <image href="./images/WhatsApp Image 2026-02-12 at 04.56.14-fotor-bg-remover-20260218225046.png" x="-20"
+              y="-5" width="240" height="210" preserveAspectRatio="xMidYMid slice" />
+
+          </g>
+
+        </svg>
+      </div>
+
     </div>
 
-
-
-    <a href="https://wa.me/923436655627" target="_blank" class="whatsapp-float">
-      <i class="fa-brands fa-whatsapp"></i>
-      <span class="notification-dot"></span>
-    </a>
+    <!-- SCROLL -->
+    <div class="scroll" onclick="scrollToAbout()">
+      <i class="fa-solid fa-computer-mouse"></i>
+      <span>Scroll down</span>
+    </div>
 
   </section>
 
-  <!-- SCROLL -->
-  <div class="scroll" onclick="scrollToAbout()">
-    <i class="fa-solid fa-computer-mouse"></i>
-    <span>Scroll down</span>
-  </div>
-  <!-- ------about-section------ -->
+
+  <!-- -----about-section------ -->
   <section class="about" id="about">
     <div class="about-title">
       <h2>About Me</h2>
@@ -143,7 +173,7 @@
           <div class="skill-bar">
             <span>HTML</span>
             <div class="bar">
-              <div style="width:90%">90%</div>
+              <div class="percent" style="width:90%">90%</div>
             </div>
           </div>
           <div class="skill-bar">
@@ -614,34 +644,39 @@
   </section>
 
   <!-- -----footer-section------ -->
- <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-left">
-      <h2>Latif AkhooN</h2>
-      <p>Frontend Developer</p>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h2>Latif AkhooN</h2>
+        <p>Frontend Developer</p>
+      </div>
+
+      <div class="footer-center">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+      </div>
+
+      <div class="footer-right">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
     </div>
 
-    <div class="footer-center">
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Portfolio</a>
+    <div class="footer-bottom">
+      © Latif AkhooN. All rights reserved
     </div>
+  </footer>
+  <!-- Scroll Top Button -->
+  <button id="scrollTopBtn" class="bottomBtn">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <a href="https://wa.me/923436655627" target="_blank" class="whatsapp-float">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="notification-dot"></span>
+  </a>
 
-    <div class="footer-right">
-      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#"><i class="fa-brands fa-twitter"></i></a>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    © Latif AkhooN. All rights reserved
-  </div>
-</footer>
-<!-- Scroll Top Button -->
-<button id="scrollTopBtn" class="bottomBtn">
-  <i class="fas fa-arrow-up"></i>
-</button>
   <script src="script.js"></script>
 </body>
 

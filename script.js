@@ -1,22 +1,32 @@
-const toggle = document.getElementById("theme-toggle");
+const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
+const toggleMenu = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
 
-// Load saved mode
-if (localStorage.getItem("theme") === "dark") {
+/* THEME */
+if(localStorage.getItem("theme") === "dark"){
   body.classList.add("dark");
-  toggle.classList.replace("fa-moon", "fa-sun");
+  toggleBtn.classList.remove("fa-moon");
+  toggleBtn.classList.add("fa-sun");
 }
 
-toggle.addEventListener("click", () => {
+toggleBtn.addEventListener("click", () => {
   body.classList.toggle("dark");
 
-  if (body.classList.contains("dark")) {
-    toggle.classList.replace("fa-moon", "fa-sun");
+  if(body.classList.contains("dark")){
+    toggleBtn.classList.remove("fa-moon");
+    toggleBtn.classList.add("fa-sun");
     localStorage.setItem("theme", "dark");
   } else {
-    toggle.classList.replace("fa-sun", "fa-moon");
+    toggleBtn.classList.remove("fa-sun");
+    toggleBtn.classList.add("fa-moon");
     localStorage.setItem("theme", "light");
   }
+});
+
+/* MOBILE MENU */
+toggleMenu.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });
 
 // ----skill-section----
@@ -135,33 +145,6 @@ function scrollToAbout() {
 }
 
 
-// (function () {
-//   emailjs.init("fkXMyhpsHTBflUyuZ");
-// })();
-
-// -----contect-section------
-// emailjs.init("YOUR_PUBLIC_KEY"); // ← replace with your EmailJS Public Key
-
-// document.getElementById("contact-Form").addEventListener("submit", function (e) {
-//   e.preventDefault();
-
-//   emailjs.sendForm(
-//     "YOUR_SERVICE_ID",   // ← replace with your Service ID
-//     "YOUR_TEMPLATE_ID",  // ← replace with your Template ID
-//     this
-//   ).then(
-//     function () {
-//       alert("✅ Message sent successfully!");
-//       document.getElementById("contactForm").reset();
-//     },
-//     function (error) {
-//       console.log(error);
-//       alert("❌ Message failed. Try again!");
-//     }
-//   );
-// });
-
-// ------testimonial-section------
 
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.querySelector(".testimonial-slider");
@@ -227,6 +210,3 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initially hide button
   scrollBtn.style.display = "none";
 });
-
-
-
