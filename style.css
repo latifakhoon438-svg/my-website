@@ -11,50 +11,110 @@ body {
   transition: 0.4s;
 }
 
-/* HEADER */
-.header {
+/* =========================
+   HEADER
+========================= */
+
+.header{
+  width:100%;
+  padding:18px 8%;
+  background:#ffffff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:relative;
+  top:0;
+  z-index:1000;
+  box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.logo{
+  font-size:22px;
+  font-weight:600;
+  color:#6c63ff;
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.navlinks{
   position: relative;
-  padding: 25px 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* background: #000; */
-  cursor: pointer;
-  width: 100%;
+  display:flex;
+  align-items:center;
+  gap:28px;
 }
 
-.logo {
-  font-weight: 600;
-  /* font-size: 22px; */
+.navlinks a{
+  text-decoration:none;
+  color:#222;
+  font-weight:500;
+  transition:.3s;
 }
 
-.nav a {
-  margin: 0 18px;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
+.navlinks a:hover,
+.navlinks a.active{
+  color:#6c63ff;
 }
 
-.nav a.active {
-  color: var(--primary);
+/* =========================
+   DARK MODE ICON
+========================= */
+
+#theme-toggle{
+  font-size:20px;
+  cursor:pointer;
+  color:#6c63ff;
+  /* transition:.3s; */
 }
 
-.nav i {
-  margin-left: 20px;
-  cursor: pointer;
+#theme-toggle:hover{
+  transform:rotate(20deg);
 }
 
-.menu-toggle {
-  display: none;
-  position: relative;
-  font-size: 34px;
-  font-weight: 600;
-  cursor: pointer;
-  color: var(--text);
+/* =========================
+   MENU TOGGLE (HAMBURGER)
+========================= */
+
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
 }
 
-.active .menu-toggle {
-  color: var(--primary);
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width:768px){
+
+  .menu-toggle{
+    display:block;
+    color:#6c63ff;
+    margin-left: 40%;
+  }
+
+  .navlinks{
+    position:absolute;
+    top:100px;
+    left:0px;
+    width:100%;
+    background:#080808;
+    flex-direction:column;
+    border-radius: 12px;
+   text-align: center;
+    display:none;
+     transition:0.3s;
+  }
+
+  .navlinks.active{
+    display: flex;
+  }
+
+  #theme-toggle{
+    margin-top:10px;
+  }
+
 }
 
 
@@ -67,6 +127,7 @@ body {
   justify-content: center;
   padding: 40px;
   position: relative;
+  
 }
 
 .hero-container {
@@ -172,25 +233,6 @@ body.dark .hero-text p {
   }
 
   .social {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    background: #111;
-    flex-direction: column;
-    width: 200px;
-    padding: 20px;
-    display: none;
-  }
-
-  .nav-links.active {
     display: flex;
   }
 
@@ -1392,18 +1434,6 @@ MODERN CLEAN RESPONSIVE FIX
 /* ---------- TABLETS ---------- */
 @media (max-width: 992px) {
 
-  .header {
-    padding: 18px 30px;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
   /* HERO */
   .hero {
     padding: 60px 20px;
@@ -1427,7 +1457,9 @@ MODERN CLEAN RESPONSIVE FIX
   }
 
   .social {
-    display: none;
+    display: flex;
+    bottom: -20%;
+    left: -20px;
   }
 
   .scroll {
@@ -1460,7 +1492,8 @@ MODERN CLEAN RESPONSIVE FIX
   .portfolio__slide {
     flex-direction: column;
     text-align: center;
-    width: 85%;
+    width: 90%;
+    margin-left: 8%;
   }
 
   .portfolio__data {
@@ -1500,13 +1533,6 @@ MODERN CLEAN RESPONSIVE FIX
 /* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
 
-  .header {
-    padding: 16px 20px;
-  }
-
-  .logo {
-    font-size: 18px;
-  }
 
   .hero-text h1 {
     font-size: 32px;

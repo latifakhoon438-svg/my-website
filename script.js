@@ -1,7 +1,7 @@
 const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
 const toggleMenu = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+// const navLinks = document.getElementById("nav-links");
 
 /* THEME */
 if(localStorage.getItem("theme") === "dark"){
@@ -212,3 +212,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// ----menu-toggle----
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+  if(navLinks.classList.contains("active")){
+    menuToggle.innerHTML = "✖";
+  } else {
+    menuToggle.innerHTML = "&#9776;";
+  }
+});
