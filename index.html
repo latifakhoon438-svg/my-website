@@ -505,79 +505,94 @@
     </section>
   </section>
 
-  <!-- --------testimonial-section------  -->
-  <section class="testimonial-section">
-    <div class="container">
-      <h2 class="section-title">What My Clients Say</h2>
-      <p class="section-subtitle">Real feedback from satisfied clients</p>
+ 
+  <!-- -------- Modern Testimonial Section -------- -->
+<section class="testimonial-section">
 
-      <div class="testimonial-slider-wrapper">
-        <div class="testimonial-slider">
-          <!-- Slide 1 -->
-          <div class="testimonial-slide">
-            <div class="testimonial-card">
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
-              <h4>Raul Harris</h4>
-              <span>Client</span>
-              <p>Excellent service, highly professional, and very responsive. Loved working with him!</p>
-            </div>
-            <div class="testimonial-card">
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
-              <h4>Sara Smith</h4>
-              <span>Client</span>
-              <p>Creative and detail-oriented. Delivered the project on time with amazing quality.</p>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="testimonial-slide">
-            <div class="testimonial-card">
-              <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client">
-              <h4>John Carter</h4>
-              <span>Client</span>
-              <p>Very professional and delivers work on time. Highly recommended!</p>
-            </div>
-            <div class="testimonial-card">
-              <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client">
-              <h4>Emma Watson</h4>
-              <span>Client</span>
-              <p>Excellent communication and amazing design skills. Fully satisfied.</p>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="testimonial-slide">
-            <div class="testimonial-card">
-              <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Client">
-              <h4>David Lee</h4>
-              <span>Client</span>
-              <p>Creative and hardworking developer. My website performance improved a lot.</p>
-            </div>
-            <div class="testimonial-card">
-              <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Client">
-              <h4>Olivia Brown</h4>
-              <span>Client</span>
-              <p>Outstanding experience. Very cooperative and responsive 24/7 support.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Arrows -->
-        <button class="arrow left" id="prev">&#10094;</button>
-        <button class="arrow right" id="next">&#10095;</button>
-      </div>
-
-      <!-- Dots -->
-      <div class="dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-    </div>
-  </section>
+<h2 class="title">What My Clients Say</h2>
+<p class="subtitle">Real feedback from my clients</p>
 
 
+<div class="slider-wrapper">
 
+<div class="testimonial-slider" id="slider">
+
+<!-- slide 1 -->
+<div class="testimonial-slide">
+
+<div class="card">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<h3>Raul Harris</h3>
+<span>Client</span>
+<p>Amazing work and modern design.</p>
+</div>
+
+<div class="card">
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<h3>Sara Smith</h3>
+<span>Client</span>
+<p>Very professional developer.</p>
+</div>
+
+</div>
+
+<!-- slide 2 -->
+<div class="testimonial-slide">
+
+<div class="card">
+<img src="https://randomuser.me/api/portraits/men/45.jpg">
+<h3>John Carter</h3>
+<span>Client</span>
+<p>Delivered project on time.</p>
+</div>
+
+<div class="card">
+<img src="https://randomuser.me/api/portraits/women/65.jpg">
+<h3>Emma Watson</h3>
+<span>Client</span>
+<p>Excellent communication skills.</p>
+</div>
+
+</div>
+
+<!-- slide 3 -->
+<div class="testimonial-slide">
+
+<div class="card">
+<img src="https://randomuser.me/api/portraits/men/76.jpg">
+<h3>David Lee</h3>
+<span>Client</span>
+<p>Highly recommended developer.</p>
+</div>
+
+<div class="card">
+<img src="https://randomuser.me/api/portraits/women/22.jpg">
+<h3>Olivia Brown</h3>
+<span>Client</span>
+<p>Outstanding experience.</p>
+</div>
+
+</div>
+
+</div>
+
+
+<button class="arrow left" onclick="prev()">❮</button>
+<button class="arrow right" onclick="next()">❯</button>
+
+
+</div>
+
+
+<div class="dots">
+
+<span class="dot active" onclick="go(0)"></span>
+<span class="dot" onclick="go(1)"></span>
+<span class="dot" onclick="go(2)"></span>
+
+</div>
+
+</section>
 
 
   <!-- ------contact-section------ -->

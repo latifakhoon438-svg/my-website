@@ -210,3 +210,65 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initially hide button
   scrollBtn.style.display = "none";
 });
+
+
+// -----testimonial-section------
+document.addEventListener("DOMContentLoaded", function(){
+
+  const slider = document.getElementById("testimonial-slider");
+  const slides = document.querySelectorAll(".testimonial-slide");
+  const dots = document.querySelectorAll(".testimonial-dot");
+
+  const nextBtn = document.getElementById("next");
+  const prevBtn = document.getElementById("prev");
+
+  let index = 0;
+
+  function updateSlider(){
+
+    slider.style.transform =
+      "translateX(-" + (index * 100) + "%)";
+
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    dots[index].classList.add("active");
+
+  }
+
+  nextBtn.onclick = function(){
+
+    index++;
+
+    if(index >= slides.length){
+      index = 0;
+    }
+
+    updateSlider();
+
+  };
+
+  prevBtn.onclick = function(){
+
+    index--;
+
+    if(index < 0){
+      index = slides.length - 1;
+    }
+
+    updateSlider();
+
+  };
+
+  dots.forEach((dot, i) => {
+
+    dot.onclick = function(){
+
+      index = i;
+
+      updateSlider();
+
+    };
+
+  });
+
+});
