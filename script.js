@@ -4,7 +4,7 @@ const toggleMenu = document.getElementById("menu-toggle");
 // const navLinks = document.getElementById("nav-links");
 
 /* THEME */
-if(localStorage.getItem("theme") === "dark"){
+if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark");
   toggleBtn.classList.remove("fa-moon");
   toggleBtn.classList.add("fa-sun");
@@ -13,7 +13,7 @@ if(localStorage.getItem("theme") === "dark"){
 toggleBtn.addEventListener("click", () => {
   body.classList.toggle("dark");
 
-  if(body.classList.contains("dark")){
+  if (body.classList.contains("dark")) {
     toggleBtn.classList.remove("fa-moon");
     toggleBtn.classList.add("fa-sun");
     localStorage.setItem("theme", "dark");
@@ -218,7 +218,7 @@ const navLinks = document.getElementById('nav-links');
 
 menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('show');
-  if(navLinks.classList.contains("active")){
+  if (navLinks.classList.contains("active")) {
     menuToggle.innerHTML = "✖";
   } else {
     menuToggle.innerHTML = "&#9776;";
