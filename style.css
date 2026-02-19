@@ -1354,6 +1354,27 @@ MODERN CLEAN RESPONSIVE FIX
   .cta__container {
     padding: 40px;
   }
+  .services__content {
+    width: 90%;
+    max-width: 380px;
+  }
+  .services__container {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    /* background: #000; */
+    align-items: center;
+    justify-content: center;
+  }
+  .qualification__sections{
+  flex-direction: column;
+  gap: 40px;
+  }
+  .qualification__data{
+    width: 90%;
+    /* background: #111; */
+    margin-left: 8%;
+  }
 
 }
 
@@ -1429,6 +1450,7 @@ MODERN CLEAN RESPONSIVE FIX
   .portfolio__slide {
     flex-direction: column;
     text-align: center;
+    width: 85%;
   }
 
   .portfolio__data {
