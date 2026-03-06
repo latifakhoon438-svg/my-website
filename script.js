@@ -224,3 +224,11 @@ menuToggle.addEventListener('click', () => {
     menuToggle.innerHTML = "&#9776;";
   }
 });
+
+// ----Loading-section----
+window.addEventListener("load", function(){
+  setTimeout(function(){
+    document.getElementById("loadingScreen").style.display = "none";
+    document.getElementById("mainContent").style.display = "block";
+  }, 5000)
+})

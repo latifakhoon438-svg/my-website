@@ -9,8 +9,35 @@ body {
   background: #f4f4f4;
   color: #222;
   transition: 0.4s;
-}
 
+}
+      #loadingScreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 400;
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+        }
+        #loadingScreen h1{
+          font-size: 26px;
+          font-weight: 700;
+          font-family: 'Times New Roman', Times, serif;
+        }
+
+        #mainContent {
+            display: none;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+        }
 /* =========================
    HEADER
 ========================= */
@@ -18,7 +45,8 @@ body {
 .header {
   width: 100%;
   padding: 18px 8%;
-  background: #ffffff;
+  background: #080808;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,11 +71,12 @@ body {
   display: flex;
   align-items: center;
   gap: 28px;
+  font-size: 18px;
 }
 
 .navlinks a {
   text-decoration: none;
-  color: #222;
+  color: #e0dada;
   font-weight: 500;
   transition: .3s;
 }
@@ -158,6 +187,7 @@ body {
   font-size: 48px;
   font-weight: 800;
   padding-left: 40px;
+  color: #444;
 }
 
 .hero-text span {
@@ -182,7 +212,7 @@ body {
 .hero-btn {
   background: #6c63ff;
   color: #fff;
-  padding: 14px 28px;
+  padding: 12px;
   border-radius: 12px;
   text-decoration: none;
   display: inline-flex;
@@ -256,11 +286,12 @@ body.dark .hero-text p {
 .about-title h2 {
   font-size: 36px;
   font-weight: 700;
+  color: #555252;
 }
 
 .about-title span {
   font-size: 14px;
-  color: #6b7280;
+  color: #555252;
 }
 
 /* MAIN LAYOUT */
@@ -298,6 +329,7 @@ body.dark .hero-text p {
 .about-info h3 {
   font-size: 26px;
   font-weight: 700;
+  color: #555252;
 }
 
 .about-info span {
@@ -314,6 +346,7 @@ body.dark .hero-text p {
   max-width: 800px;
   margin: auto;
   font-family: "Poppins", sans-serif;
+  color: #555252;
 }
 
 .about-btn {
@@ -479,6 +512,7 @@ body.dark .hero-text p {
 .section-title {
   text-align: center;
   font-size: 32px;
+  color: #555252;
 }
 
 .section-subtitle {
@@ -579,6 +613,7 @@ body.dark .hero-text p {
   color: #777;
   display: block;
   margin-bottom: 60px;
+  font-size: 20px;
 }
 
 .services__container {
@@ -606,6 +641,7 @@ body.dark .hero-text p {
 .services__title {
   font-size: 20px;
   margin: 20px 0;
+  color: #555252;
 }
 
 .services__button {
@@ -622,14 +658,16 @@ body.dark .hero-text p {
   display: none;
   justify-content: center;
   align-items: center;
+  font-size: 22px;
 }
 
 .services__modal-content {
-  background: #fff;
+  background: #4d4646;
   padding: 30px;
   border-radius: 12px;
   width: 400px;
   position: relative;
+  font-size: 22px;
 }
 
 .services__modal-close {
@@ -642,12 +680,15 @@ body.dark .hero-text p {
 
 .services__modal-title {
   margin-bottom: 20px;
+  font-size: 26px;
 }
 
 .services__modal-services li {
   list-style: none;
   margin-bottom: 10px;
-  color: #555;
+  color: #d3c7c7;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .services__modal-services li::before {
@@ -736,20 +777,28 @@ body.dark .services__modal-services li::before {
 .portfolio__title {
   font-size: 22px;
   margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 600px;
+  color: #555252;
 }
 
 .portfolio__description {
-  color: #777;
+  color: #555252;
   margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+
 }
 
 .portfolio__button {
   display: inline-block;
   background: #6c63ff;
   color: #fff;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 8px;
   text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .portfolio__arrow {
@@ -820,10 +869,11 @@ body.dark .services__modal-services li::before {
   gap: 8px;
   background: #fff;
   color: #6c63ff;
-  padding: 12px 22px;
+  padding: 10px 18px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 500;
+  font-size: 20px;
 }
 
 .cta__img img {
@@ -886,6 +936,7 @@ body.dark .services__modal-services li::before {
 .portfolio__title {
   font-size: 22px;
   margin-bottom: 10px;
+  color: #555252;
 }
 
 .portfolio__description {
@@ -1017,11 +1068,15 @@ body.dark .services__modal-services li::before {
 
 .title {
   font-size: 32px;
+  color: #555252;
 }
 
 .subtitle {
   color: #94a3b8;
   margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #555252;
 }
 
 /* container */
@@ -1061,6 +1116,9 @@ body.dark .services__modal-services li::before {
 
 .card h3 {
   margin: 10px 0 5px;
+  color: #555252;
+font-size: 22px;
+font-weight: 600;
 }
 
 .card span {
@@ -1070,7 +1128,7 @@ body.dark .services__modal-services li::before {
 
 .card p {
   font-size: 14px;
-  color: #cbd5e1;
+  color: #555252;
 }
 
 /* arrows */
