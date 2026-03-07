@@ -1058,6 +1058,10 @@ body.dark .services__modal-services li::before {
     width: 40px;
     height: 40px;
     font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
   }
 
 }
@@ -1149,20 +1153,20 @@ body.dark .services__modal-services li::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #38bdf8;
+  background: #a11212;
   border: none;
   padding: 10px 15px;
-  color: #fff;
+  color: #0e0d0d;
   cursor: pointer;
   border-radius: 50%;
 }
 
 .left {
-  left: 10px;
+  left: 50px;
 }
 
 .right {
-  right: 10px;
+  right: 50px;
 }
 
 /* dots */
@@ -1198,6 +1202,9 @@ body.dark .services__modal-services li::before {
 
   .social {
     margin-left: 10%;
+  }
+  .qualification section{
+    width: 80%;
   }
 }
 
