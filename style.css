@@ -170,7 +170,7 @@ body {
 
 .social {
   position: absolute;
-  left: 50px;
+  left: 60px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -207,12 +207,15 @@ body {
   margin-bottom: 25px;
   font-size: 18px;
   color: #444;
+  font-weight: 500;
 }
 
 .hero-btn {
   background: #6c63ff;
   color: #fff;
-  padding: 12px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 600;
   border-radius: 12px;
   text-decoration: none;
   display: inline-flex;
@@ -227,13 +230,16 @@ body {
 
 .home__blob {
   width: 100%;
+  /* background: #3254b1; */
+
 }
 
 .scroll {
   position: absolute;
   bottom: 60px;
   left: 15%;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 600;
   color: #6c63ff;
   display: flex;
   gap: 8px;
@@ -466,6 +472,8 @@ body.dark .hero-text p {
   height: 20px;
   border-radius: 25px;
   overflow: hidden;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .bar div {
@@ -479,6 +487,8 @@ body.dark .hero-text p {
   line-height: 25px;
   border-radius: 25px;
   transition: width 1s ease;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 
@@ -1760,4 +1770,176 @@ html {
 button,
 a {
   transition: 0.3s ease;
+}
+
+/* ---------- SMALL PHONES / PORTRAIT (481px - 768px) ---------- */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  /* HEADER */
+  .header {
+    padding: 15px 5%;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .navlinks {
+    gap: 18px;
+    font-size: 16px;
+  }
+
+  #theme-toggle {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+
+  .menu-toggle {
+    font-size: 26px;
+    margin-left: 35%;
+  }
+
+  /* HERO */
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text h3 {
+    font-size: 16px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .hero-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+    margin-left: 0;
+  }
+
+  .hero-img {
+    width: 220px;
+  }
+
+  .scroll {
+    font-size: 16px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* ABOUT */
+  .about-container {
+    padding: 0 15px;
+    gap: 40px;
+  }
+
+  .about-title h2 {
+    font-size: 28px;
+  }
+
+  .about-info h3 {
+    font-size: 22px;
+  }
+
+  /* SERVICES */
+  .services__content {
+    width: 100%;
+    max-width: 280px;
+    padding: 20px;
+  }
+
+  /* PORTFOLIO */
+  .portfolio__img {
+    max-width: 100%;
+  }
+
+  .portfolio__title {
+    font-size: 18px;
+  }
+
+  .portfolio__description {
+    font-size: 14px;
+  }
+
+  .portfolio__arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  /* CTA */
+  .cta__title {
+    font-size: 22px;
+  }
+
+  .cta__description {
+    font-size: 14px;
+  }
+
+  .cta__img img {
+    width: 160px;
+  }
+
+  /* CONTACT */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-left h2 {
+    font-size: 24px;
+  }
+
+  .footer-center a {
+    font-size: 14px;
+  }
+
+  .footer-right a {
+    font-size: 16px;
+  }
+
+  /* TESTIMONIAL */
+  .card {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  /* WHATSAPP BUTTON */
+  .whatsapp-float {
+    width: 60px;
+    height: 60px;
+  }
+
+  .whatsapp-float i {
+    font-size: 28px;
+  }
+
+  /* SCROLL BUTTON */
+  .bottomBtn {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
 }
