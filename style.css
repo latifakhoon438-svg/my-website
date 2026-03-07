@@ -11,33 +11,36 @@ body {
   transition: 0.4s;
 
 }
-      #loadingScreen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 18px;
-            font-weight: 400;
-            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-        }
-        #loadingScreen h1{
-          font-size: 26px;
-          font-weight: 700;
-          font-family: 'Times New Roman', Times, serif;
-        }
 
-        #mainContent {
-            display: none;
-            color: #fff;
-            font-size: 24px;
-            font-weight: 700;
-        }
+#loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+#loadingScreen h1 {
+  font-size: 26px;
+  font-weight: 700;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#mainContent {
+  display: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
 /* =========================
    HEADER
 ========================= */
@@ -1127,8 +1130,8 @@ body.dark .services__modal-services li::before {
 .card h3 {
   margin: 10px 0 5px;
   color: #555252;
-font-size: 22px;
-font-weight: 600;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .card span {
@@ -1709,7 +1712,7 @@ MODERN CLEAN RESPONSIVE FIX
 
   .portfolio__data {
     width: 100%;
-    
+
   }
 
   .bottomBtn {
