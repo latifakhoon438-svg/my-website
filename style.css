@@ -320,9 +320,9 @@ body.dark .hero-text p {
 .about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 90px;
+  gap: 60px;        /* 90px se kam */
   align-items: center;
-  padding: 0 120px;
+  padding: 0 80px;  /* 120px se kam */
 }
 
 /* IMAGE */
@@ -506,43 +506,45 @@ body.dark .hero-text p {
   font-size: 16px;
   font-weight: 500;
 }
-
-
-@media(max-width:768px) {
+@media(max-width:768px){
 
   .about{
-    width: 100%;
-    
+    padding: 60px 0;
   }
-  .about-container {
+
+  .about-container{
     grid-template-columns: 1fr;
+    padding: 0 20px;   /* mobile padding */
+    gap: 40px;
     text-align: center;
+  }
+
+  .about-img img{
+    max-width: 280px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .about-content{
     width: 100%;
   }
 
-  .about-img img {
-    max-width: 100%;
-  }
-
-  .about-info {
+  .about-info{
     justify-content: center;
-    /* background: #1e293b; */
-    width: 80%;
-    margin: 0 auto;
-  }
-  .about-content{
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
+    gap: 40px;
+    flex-wrap: wrap;  /* important */
   }
 
-  .skills {
+  .skills{
     width: 80%;
   }
+
   .about-btn{
     margin-top: 20px;
   }
+
 }
+
 
 /* -----qualification-section------- */
 
@@ -1091,7 +1093,7 @@ body.dark .services__modal-services li::before {
     display: flex;
     align-items: center;
     justify-content: center;
-
+     
   }
 
 }
