@@ -121,6 +121,7 @@ body {
 @media (max-width:768px) {
    .header{
     width: 100%;
+    padding: 10px 10px;
    }
    .logo{
     font-size: 20px;
@@ -519,7 +520,9 @@ body.dark .hero-text p {
   .about-container {
     grid-template-columns: 1fr;
     text-align: center;
-    width: 80%;
+    width: 95%;
+    /* background: #1e293b; */
+    margin: 0 auto;
   }
 
   .about-img img {
@@ -528,7 +531,7 @@ body.dark .hero-text p {
 
   .about-info {
     justify-content: center;
-    padding-right: 20px;
+    /* padding-right: 20px; */
   }
 
   .skills {
