@@ -122,6 +122,10 @@ body {
    .header{
     width: 100%;
    }
+   .logo{
+    font-size: 20px;
+    font-weight: 500;
+   }
   .menu-toggle {
     display: block;
     color: #6c63ff;
@@ -506,10 +510,8 @@ body.dark .hero-text p {
 @media(max-width:768px) {
 
   .about{
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
-    /* background: #1e293b; */
-    margin-left: 50px;
     display: block;
     align-items: center;
     justify-content: center;
