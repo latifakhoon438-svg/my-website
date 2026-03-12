@@ -987,6 +987,8 @@ margin-bottom:10px;
 .portfolio__description{
 margin-bottom:20px;
 color:#555;
+font-size: 20px;
+font-weight: 400;
 }
 
 .portfolio__button{
@@ -1014,11 +1016,13 @@ transform:translateY(-50%);
 }
 
 .portfolio__arrow.left{
-left:-80px;
+left:-120px;
+ top: 60px;
 }
 
 .portfolio__arrow.right{
-right:-80px;
+right:-120px;
+top: 60px;
 }
 
 /* DOTS */
@@ -1084,9 +1088,12 @@ font-size:18px;
 width:50px;
 height:50px;
 font-size:16px;
-color: #0e0d0d;
-/* margin-top: 20px; */
-
+}
+.portfolio__arrow.left{
+  top: 150px;
+}
+.portfolio__arrow.right{
+  top: 150px;
 }
 
 }
