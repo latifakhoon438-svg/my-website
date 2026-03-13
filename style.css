@@ -1104,13 +1104,15 @@ font-size:16px;
 display: flex;
 align-items: center;
 justify-content: center;
-text-align: center;
+text-align: center; 
 }
 .portfolio__arrow.left{
-  top: 150px;
+  top: 250px;
+  left: 10px;
 }
 .portfolio__arrow.right{
-  top: 150px;
+  top: 250px;
+  right: 10px;
 }
 
 }
