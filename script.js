@@ -228,7 +228,25 @@ menuToggle.addEventListener('click', () => {
 // ----Loading-section----
 window.addEventListener("load", function(){
   setTimeout(function(){
-    document.getElementById("loadingScreen").style.display = "none";
+    document.getElementById("loading").style.display = "none";
     document.getElementById("mainContent").style.display = "block";
   }, 5000)
 })
+ let progress = document.getElementById("progress");
+    let percent = document.getElementById("percent");
+
+    let count = 0;
+
+    let loading = setInterval(() => {
+
+      count++;
+
+      progress.style.width = count + "%";
+      percent.innerHTML = count + "%";
+
+      if(count >= 100){
+        clearInterval(loading);
+        percent.innerHTML = "DONE";
+      }
+
+    }, 40);
