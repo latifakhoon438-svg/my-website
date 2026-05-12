@@ -249,4 +249,4 @@ window.addEventListener("load", function(){
         percent.innerHTML = "DONE";
       }
 
-    }, 40);
+    }, 35);
