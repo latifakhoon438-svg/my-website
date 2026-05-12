@@ -296,6 +296,12 @@ body {
   gap: 8px;
   align-items: center;
   margin-left: 40px;
+  transition: 1s;
+  overflow: hidden;
+}
+.hero-btn:hover {
+  background: #584ff1;
+  transform: translateY(-3px);
 }
 
 .hero-img {
@@ -388,14 +394,14 @@ body.dark .hero-text p {
   width: 100%;
   max-width: 420px;
   border-radius: 16px;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   margin-left: 200px;
 }
 
 /* TEXT */
 .about-content p {
   color: #6b7280;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.7;
   margin-bottom: 40px;
 }
@@ -414,7 +420,7 @@ body.dark .hero-text p {
 }
 
 .about-info span {
-  font-size: 13px;
+  font-size: 16px;
   color: #6b7280;
 }
 
