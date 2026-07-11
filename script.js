@@ -230,7 +230,7 @@ window.addEventListener("load", function(){
   setTimeout(function(){
     document.getElementById("loading").style.display = "none";
     document.getElementById("mainContent").style.display = "block";
-  }, 5000)
+  }, 7000)
 })
  let progress = document.getElementById("progress");
     let percent = document.getElementById("percent");
@@ -249,4 +249,4 @@ window.addEventListener("load", function(){
         percent.innerHTML = "DONE";
       }
 
-    }, 35);
+    }, 50);
