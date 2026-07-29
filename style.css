@@ -1201,11 +1201,11 @@ justify-content: center;
 text-align: center; 
 }
 .portfolio__arrow.left{
-  top: 250px;
+  top: 260px;
   left: 10px;
 }
 .portfolio__arrow.right{
-  top: 250px;
+  top: 260px;
   right: 10px;
 }
 
