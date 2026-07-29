@@ -808,6 +808,12 @@ body.dark .hero-text p {
   font-size: 20px;
   font-weight: 400;
 }
+@media(max-width: 768px){
+  .services__modal-services li {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
 
 .services__modal-services li::before {
   content: "✔";
@@ -1158,10 +1164,12 @@ transform:translateY(-50%);
 
 .portfolio__arrow.left{
 left:10px;
+/* margin-top: 10px; */
 }
 
 .portfolio__arrow.right{
 right:10px;
+/* margin-top: 0px; */
 }
 
 }
@@ -1176,6 +1184,7 @@ padding:70px 15px;
 
 .portfolio__img{
 max-width:100%;
+margin-right: 25px;
 }
 
 .portfolio__title{
